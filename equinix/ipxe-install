@@ -1,5 +1,7 @@
 #!ipxe
 
-kernel https://releases.rancher.com/harvester/master/harvester-master-vmlinuz-amd64 ip=dhcp net.ifnames=1 rd.cos.disable rd.noverifyssl root=live:https://releases.rancher.com/harvester/master/harvester-rootfs-amd64.squashfs console=ttyS1,115200 harvester.install.automatic=true harvester.install.config_url=https://metadata.platformequinix.com/userdata
-initrd https://releases.rancher.com/harvester/master/harvester-master-initrd-amd64
+#kernel https://releases.rancher.com/harvester/master/harvester-master-vmlinuz-amd64 ip=dhcp net.ifnames=1 rd.cos.disable rd.noverifyssl root=live:https://releases.rancher.com/harvester/master/harvester-rootfs-amd64.squashfs console=ttyS1,115200 harvester.install.automatic=true harvester.install.config_url=https://metadata.platformequinix.com/userdata
+kernel https://github.com/netbootxyz/asset-mirror/releases/download/v1.0.1-e4b9482d/harvester-v1.0.1-vmlinuz-amd64 ip=dhcp net.ifnames=1 rd.cos.disable rd.noverifyssl root=live:https://github.com/netbootxyz/asset-mirror/releases/download/v1.0.1-e4b9482d/harvester-v1.0.1-rootfs-amd64.squashfs console=ttyS1,115200 harvester.install.automatic=true harvester.install.config_url=https://metadata.platformequinix.com/userdata
+#initrd https://releases.rancher.com/harvester/master/harvester-master-initrd-amd64
+initrd https://github.com/netbootxyz/asset-mirror/releases/download/v1.0.1-e4b9482d/harvester-v1.0.1-initrd-amd64
 boot
